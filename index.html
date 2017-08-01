@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Node JS Form</title>
+      <style>
+        .show{
+          display: block !important;
+        }
+        body {
+          font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+          font-size: 13px;
+        }
+        #submitForm {
+          width: 600px;
+          border-right: 1px solid #CCC;
+          padding-right: 15px;
+          float: left;
+        }
+        input {
+          margin: 5px 0;
+          padding: 5px;
+          width: 250px;
+          display: block;
+        }
+        label {
+          display: block;
+          margin-top: 15px;
+        }
+        .errMsg {
+          display: none;
+          color: #F00;
+          font-size: 13px;
+          margin-top: 3px;
+        }
+        #submit {
+          margin-top: 10px;
+        }
+        #response {
+          float: left;
+          margin: 15px 0 0 25px;
+        }
+        #response table {
+          margin-top: 10px;
+          border-collapse: collapse;
+        }
+        #response td {
+          border: 1px solid black;
+          padding: 7px;
+        }
+      </style>
+  </head>
+
+  <body>
+    <form id="submitForm" action="http://127.0.0.1/form">
+      <label for="fName">First Name: </label>
+      <input type="text" name="fName" id="fName" placeholder="Enter Your First Name" />
+      <span class="errfName errMsg"></span>
+
+      <label for="lName">Last Name: </label>
+      <input type="text" name="lName" id="lName" placeholder="Enter Your Last Name" />
+      <span class="errlName errMsg"></span>
+
+      <label for="email">Email ID: </label>
+      <input type="text" name="email" id="email" placeholder="Enter Your Email ID" />
+      <span class="erremail errMsg"></span>
+
+      <label for="pass">Password: (At least 5 digits long containing alphanumeric with at least 1 uppercase and lowercase letter)</label>
+      <input type="password" name="pass" id="pass" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" />
+      <span class="errpass errMsg"></span>
+
+      <label for="rpass">Repeat Password: </label>
+      <input type="password" name="rpass" id="rpass" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" />
+      <span class="errrpass errMsg"></span>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/form.js"></script>
+  </body>
+
+</html>
